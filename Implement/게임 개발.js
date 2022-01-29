@@ -44,7 +44,6 @@ const solution = () => {
         yPos = ny;
         result++;
         turnTime = 0;
-        console.log(xPos, yPos);
         continue;
       }
     }
@@ -52,19 +51,15 @@ const solution = () => {
     turnTime++;
 
     if (turnTime === 4) {
-      console.log(direction, "dir");
-      console.log(xPos, yPos, "turnMax");
       nx = xPos - dx[direction];
       ny = yPos - dy[direction];
-      // console.log(nx, ny, "next");
+
       if (checkRange(nx, ny, N, M)) {
         if (map[nx][ny] === 0) {
           // 육지인 경우
           xPos = nx;
           yPos = ny;
         } else {
-          console.log("break", xPos, yPos, result);
-          console.log("next", nx, ny);
           break;
         }
       }
