@@ -5,3 +5,4 @@
 
 # 개념정리
 - [버블정렬](https://velog.io/@codenmh0822/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B2%84%EB%B8%94-%EC%A0%95%EB%A0%AC)
+- [선택정렬](https://velog.io/@codenmh0822/%EC%A0%95%EB%A0%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%84%A0%ED%83%9D-%EC%A0%95%EB%A0%AC)
