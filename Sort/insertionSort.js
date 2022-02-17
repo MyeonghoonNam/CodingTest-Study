@@ -1,15 +1,15 @@
-const insertionSort = (arr) => {
-  for (let i = 1; i < arr.length; i++) {
-    const cur = arr[i];
-    let leftIdx = i - 1;
-
-    while (leftIdx >= 0 && arr[leftIdx] > cur) {
-      [arr[leftIdx], arr[leftIdx + 1]] = [arr[leftIdx + 1], arr[leftIdx]];
-      leftIdx--;
+const insertionSort = (array) => {
+  for (let i = 1; i < array.length; i++) {
+    for (let j = i; j >= 0; j--) {
+      if (array[j] < array[j - 1]) {
+        [array[j], array[j - 1]] = [array[j - 1], array[j]];
+      } else {
+        break;
+      }
     }
   }
 
-  return arr;
+  return array;
 };
 
 const arr = [3, 7, 2, 5, 1, 4];
