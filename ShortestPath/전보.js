@@ -103,6 +103,8 @@ const solution = () => {
     while (!queue.isEmpty()) {
       const { node, cost } = queue.pop();
 
+      if (distance[node] < cost) continue;
+
       graph[node].forEach(({ destination, dist }) => {
         const totalCost = cost + dist;
 
