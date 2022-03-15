@@ -6,8 +6,8 @@ class MinHeap {
 
   insert(value) {
     this.heap.push(value);
-    this.moveUp();
     this.size++;
+    this.moveUp();
   }
 
   pop() {
@@ -20,8 +20,8 @@ class MinHeap {
     const minValue = this.heap[0];
 
     this.heap[0] = this.heap.pop();
-    this.moveDown();
     this.size--;
+    this.moveDown();
 
     return minValue;
   }

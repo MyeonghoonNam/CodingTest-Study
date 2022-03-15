@@ -6,8 +6,8 @@ class MaxHeap {
 
   insert(value) {
     this.heap.push(value);
-    this.moveUp();
     this.size++;
+    this.moveUp();
   }
 
   pop() {
@@ -19,8 +19,8 @@ class MaxHeap {
 
     const maxValue = this.heap[0];
     this.heap[0] = this.heap.pop();
-    this.moveDown();
     this.size--;
+    this.moveDown();
 
     return maxValue;
   }
