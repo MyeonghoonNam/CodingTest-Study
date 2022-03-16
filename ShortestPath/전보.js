@@ -45,7 +45,7 @@ class MinHeap {
     while (curIdx > 0) {
       const parentIdx = Math.floor((curIdx - 1) / 2);
 
-      if (this.heap[parentIdx] >= this.heap[curIdx]) break;
+      if (this.heap[parentIdx] <= this.heap[curIdx]) break;
 
       [this.heap[parentIdx], this.heap[curIdx]] = [
         this.heap[curIdx],
@@ -63,11 +63,11 @@ class MinHeap {
     let minIdx = curIdx;
     const minChild = this.heap[minIdx]?.cost;
 
-    if (minIdx < this.heapSize && leftChild < minChild) {
+    if (leftChildIdx < this.heapSize && leftChild < minChild) {
       minIdx = leftChildIdx;
     }
 
-    if (minIdx < this.heapSize && rightChild < minChild) {
+    if (rightChildIdx < this.heapSize && rightChild < minChild) {
       minIdx = rightChildIdx;
     }
 
