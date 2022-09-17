@@ -13,36 +13,36 @@ const input = (() => {
 
 const solution = () => {
   const [N, M] = input().split(" ").map(Number);
-  const array = input().split(" ").map(Number);
-  const result = binarySearch(array, N, M);
+  const food = input().split(" ").map(Number);
+  const result = binarySearch(food, N, M);
 
   return result;
 };
 
-const binarySearch = (array, count, length) => {
+const binarySearch = (food, N, M) => {
   let start = 0;
-  let end = Math.max(...array);
-  let maxHeight = 0;
+  let end = Math.max(...food);
+  let result = 0;
 
   while (start <= end) {
-    const mid = Math.floor((start + end) / 2);
-    let totalLength = 0;
+    const mid = parseInt((start + end) / 2);
+    let sum = 0;
 
-    for (let i = 0; i < count; i++) {
-      if (array[i] > mid) {
-        totalLength += array[i] - mid;
+    for (let i = 0; i < N; i++) {
+      if (food[i] > mid) {
+        sum += food[i] - mid;
       }
     }
 
-    if (totalLength < length) {
+    if (sum < M) {
       end = mid - 1;
     } else {
-      maxHeight = mid;
       start = mid + 1;
+      result = mid;
     }
   }
 
-  return maxHeight;
+  return result;
 };
 
 console.log(solution());
